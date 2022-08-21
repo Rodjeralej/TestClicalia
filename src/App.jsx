@@ -1,19 +1,17 @@
-// Dependencies
-import React, { useState } from 'react';
-// Material UI
-import PokemonsTable from './components/PokemonsTable/PokemonsTable';
-// Components
-import PokemonsFilter from './components/PokemonsFilter/PokemonsFilter';
-// Styles
-import styles from './App.module.scss';
+import { useState } from "react";
+
+import PokemonsTable from "./components/PokemonsTable/PokemonsTable";
+import PokemonsFilter from "./components/PokemonsFilter/PokemonsFilter";
+
+import styles from "./App.module.scss";
 
 function App() {
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState("");
 
   return (
     <div className={styles.container}>
       <PokemonsFilter filter={filter} setFilter={setFilter} />
-      <PokemonsTable filter={filter} />
+      <PokemonsTable filter={filter} sx={{ marginTop: 5 }} />
     </div>
   );
 }

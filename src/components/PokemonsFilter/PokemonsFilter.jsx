@@ -1,26 +1,15 @@
-// Dependencies
-import React from 'react';
-import PropTypes from 'prop-types';
-// Material UI
-import TextField from '@mui/material/TextField';
-// Constants
-import { FILTER_PLACEHOLDER } from '../../utils/constants';
-
-const filterStyles = {
-  marginBottom: 5,
-};
+import React from "react";
+import PropTypes from "prop-types";
+import TextField from "@mui/material/TextField";
 
 function PokemonsFilter({ filter, setFilter }) {
-  const onTextChange = (event) => {
-    setFilter(event.target.value);
-  };
-
   return (
     <TextField
-      label={FILTER_PLACEHOLDER}
+      label="Find some pokemons..."
       value={filter}
-      onChange={onTextChange}
-      sx={filterStyles}
+      onChange={(event) => {
+        setFilter(event.target.value);
+      }}
     />
   );
 }
