@@ -1,6 +1,5 @@
-// Dependencies
 import React from 'react';
-// Material UI
+
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 

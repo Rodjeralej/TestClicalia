@@ -1,32 +1,30 @@
-// Dependencies
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-// Material UI
+import _ from 'lodash';
+
 import TextField from '@mui/material/TextField';
-// Constants
-import { FILTER_PLACEHOLDER } from '../../utils/constants';
 
 const filterStyles = {
   marginBottom: 5,
 };
 
-function PokemonsFilter({ filter, setFilter }) {
-  const onTextChange = (event) => {
+function PokemonsFilter({ setFilter }) {
+  const handleTextChange = (event) => {
     setFilter(event.target.value);
   };
 
+  const debounceHandleTextChange = useCallback(_.debounce((e) => handleTextChange(e), 200), []);
+
   return (
     <TextField
-      label={FILTER_PLACEHOLDER}
-      value={filter}
-      onChange={onTextChange}
+      label="Find some Pokemons..."
+      onChange={debounceHandleTextChange}
       sx={filterStyles}
     />
   );
 }
 
 PokemonsFilter.propTypes = {
-  filter: PropTypes.string.isRequired,
   setFilter: PropTypes.func.isRequired,
 };
 
