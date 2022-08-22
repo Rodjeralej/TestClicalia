@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 
-import PokemonsTable from './components/PokemonsTable/PokemonsTable';
+import Stack from '@mui/material/Stack';
 
-import PokemonsFilter from './components/PokemonsFilter/PokemonsFilter';
-
-import styles from './App.module.scss';
+import PokemonsTable from './components/Pokemon/PokemonsTable/PokemonsTable';
+import PokemonsFilter from './components/Pokemon/PokemonsFilter/PokemonsFilter';
 
 function App() {
   const [filter, setFilter] = useState('');
 
   return (
-    <div className={styles.container}>
+    <Stack direction="column" padding="80px 60px">
       <PokemonsFilter filter={filter} setFilter={setFilter} />
       <PokemonsTable filter={filter} />
-    </div>
+    </Stack>
   );
 }
 

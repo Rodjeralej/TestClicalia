@@ -15,10 +15,10 @@ import ListSubheader from '@mui/material/ListSubheader';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import Chip from '@mui/material/Chip';
 
-import Spinner from '../Spinner/Spinner';
-import Error from '../Error/Error';
+import Spinner from '../../Spinner/Spinner';
+import Error from '../../Error/Error';
 
-import capitalize from '../../utils/strings';
+import capitalize from '../../../utils/strings';
 
 const styles = {
   pokemonAvatar: {

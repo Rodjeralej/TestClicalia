@@ -10,13 +10,13 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-import Spinner from '../Spinner/Spinner';
-import Error from '../Error/Error';
+import Spinner from '../../Spinner/Spinner';
+import Error from '../../Error/Error';
 import PokemonPopup from '../PokemonPopup/PokemonPopup';
 
-import capitalize from '../../utils/strings';
+import capitalize from '../../../utils/strings';
 
-import { API, ROUTES } from '../../utils/constants';
+import { API, ROUTES } from '../../../utils/constants';
 
 const tableHeaders = ['Name', 'URL'];
 
